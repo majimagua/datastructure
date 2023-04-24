@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-//用结构体表示链表中的结点
-typedef struct link{
-	int elem; //数据域
-	struct link *next; //指针域
-}Link;
-
+#include "Link.h"
 
 //******函数定义********
 

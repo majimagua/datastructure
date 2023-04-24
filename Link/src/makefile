@@ -1,10 +1,11 @@
 TARGET=libLink.so
 OBJ=Link.o
 CFLAGS=-fPIC
-LDFLAGS=-shared
+LDFLAGS=-shared -L../src
+LIBS=-lLink
 
 $(TARGET):$(OBJ)
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $^ -o $@ $(LDFLAGS) $(LIBS)
 	@echo "build success!"
 
 clean:

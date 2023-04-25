@@ -10,8 +10,8 @@ typedef struct link{
 
 //*******函数声明**********
 
-Link* InitLink1(int length); //创建自定义长度的含头结点的单链表
-Link* InitLink2(int length); //创建自定义长度的无头结点的单链表
+Link* InitLink1(); //创建含头结点的链表
+Link *InitLink2(); //创建不含头结点的链表
 
 void LinkInsert1(Link *p, int add, int elem); //向含头结点的链表插入元素
 Link *LinkInsert2(Link *p, int add, int elem); //向无头结点的链表插入元素

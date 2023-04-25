@@ -11,9 +11,8 @@ int main(){
     printf("\n**********有头结点的链表**********\n");
 	printf("\n");
 	Link* p1=NULL;
-	printf("初始化含头结点的链表为：\n");
-	//创建含头结点的链表{1,2,3,4}
-	p1=InitLink1();
+	//创建自定义长度的含头结点的链表
+	p1=InitLink1(5);
 	//输出链表中的数据
 	LinkPrint(p1);
 	
@@ -61,9 +60,8 @@ int main(){
 	printf("\n**********无头结点的链表**********\n");
 	printf("\n");
 	Link* p2=NULL;
-	printf("初始化无头结点的链表为：\n");
-	//创建无头结点的链表{1,2,3,4}
-	p2=InitLink2();
+	//创建自定义长度的无头结点的链表
+	p2=InitLink2(5);
 	//输出链表中的数据
 	LinkPrint(p2);
 	

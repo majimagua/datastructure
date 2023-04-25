@@ -6,6 +6,7 @@ LIBS=-lLink -lLink_Reverse
 
 $(TARGET):$(OBJ)
 	$(CC) $^ -o $@ $(LDFLAGS) $(LIBS)
+	@echo "Build success!"
 
 clean:
 	$(RM) $(TARGET) $(OBJ)

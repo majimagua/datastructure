@@ -4,9 +4,9 @@
 
 //******函数定义********
 
-//创建一个存储{1,2,3,4}且含头结点的链表
-Link* InitLink1(){
-	
+//创建一个自定义长度的含头结点的单链表
+Link* InitLink1(int length){
+	printf("创建一个存储%d个数字的含头结点的单链表\n", length);
 	//1、创建头指针
 	Link* p=NULL;
 	//2、创建头结点
@@ -16,43 +16,53 @@ Link* InitLink1(){
 	//头指针指向头结点
 	p=temp;
 	//3、每创建一个结点，都令其直接前驱结点的指针指向它
-	for (int i=1; i<5; i++){
+	for (int i=1; i<length+1; i++){
+		int num;
+		printf("请输入第%d个数字：", i);
+		scanf("%d", &num);
 		//创建一个结点
 		Link* a=(Link*)malloc(sizeof(Link));
-		a->elem=i;
+		a->elem=num;
 		a->next=NULL;
 		//每次temp指向的结点就是a的直接前驱结点
 		temp->next=a;
 		//temp指向下一个结点（也就是a），为下次添加结点做准备
 		temp=temp->next;
 	}
+	printf("全部数据输入完毕，链表创建成功\n");
 	return p;
 }
 
-//创建一个存储{1,2,3,4}且无头结点的链表
-Link *InitLink2(){
+//创建一个自定义长度的无头结点的单链表
+Link *InitLink2(int length){
+	printf("创建一个存储%d个数字的无头结点的单链表\n", length);
+	printf("请输入第1个数字：");
+	int num;
+	scanf("%d", &num);
 	//创建头指针
 	Link *p=NULL;
 	//创建首元结点
 	Link *temp=(Link *)malloc(sizeof(Link));
-	temp->elem=1;
+	temp->elem=num;
 	temp->next=NULL;
 	//头指针指向首元结点
 	p=temp;
 	//每创建一个结点，都令其直接前驱结点的指针指向它
-	for (int i=2; i<5; i++){
+	for (int i=2; i<length+1; i++){
+		printf("请输入第%d个数字：", i);
+		scanf("%d", &num);
 		//创建一个结点
 		Link *a=(Link *)malloc(sizeof(Link));
-		a->elem=i;
+		a->elem=num;
 		a->next=NULL;
 		//每次temp指向的结点就是a的直接前驱结点
 		temp->next=a;
 		//temp指向下一个结点（也就是a），为下次添加结点做准备
 		temp=temp->next;
 	}
+	printf("全部数据输入完毕，链表创建成功\n");
 	return p;
 }
-
 
 //打印链表中存储的数据
 void LinkPrint(Link* p){

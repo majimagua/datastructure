@@ -7,8 +7,7 @@
 int main(){
 	//*****有头结点的单链表*****
 	Link *p1=NULL;
-	printf("创建有头结点的单链表{1, 2, 3, 4}\n");
-	p1=InitLink1();
+	p1=InitLink1(5);
 	LinkPrint(p1);
 	printf("迭代法反转链表\n");
 	p1=Iteration_Reverse1(p1);
@@ -24,8 +23,7 @@ int main(){
 	printf("\n\n");
 	//*****无头结点的单链表*****
 	Link *p2=NULL;
-	printf("创建无头结点的单链表{1, 2, 3, 4}\n");
-	p2=InitLink2();
+	p2=InitLink2(5);
 	LinkPrint(p2);
 	printf("迭代法反转链表\n");
 	p2=Iteration_Reverse2(p2);
